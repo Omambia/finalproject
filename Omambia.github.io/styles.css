@@ -1,0 +1,202 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+.home{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(11, 1fr);
+    height: 100vh;
+    width: 100vw;
+    gap: 0.5%;
+}
+.header{
+    width: 100%;
+    grid-row: 1/span 2;
+    color: black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.topbar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.logo{
+    width: 10%;
+    background-color:antiquewhite;
+    background-image: url(images/logo.png);
+    min-height: 30px;
+    max-width: 50px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+ul{
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+ul li a:hover{
+    background-color: green;
+}
+ul li ul li{
+    display: none;
+}
+ul li:hover ul li{
+    display: block;
+}
+.search-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.search{
+    display: flex;
+    align-items: center;
+}
+.picture{
+    grid-row: 3/ span 2;
+    border-radius: 2%;
+    background-image: url(images/entertain.png);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+.promo{
+    grid-row: 5/ span 1;
+    background-color:coral;
+    text-align: center;
+    border-radius: 1%;
+
+}
+.products{
+    grid-row: 6/ span 4;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 51%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    gap: 1%;
+}
+.card{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, 1fr);
+    /*overflow-y: hidden;*/
+    height: auto;
+    padding: 1rem;
+    border: 1px solid #777;
+    border-radius: .25rem;
+}
+.card-header{
+    grid-row: 1/ span 4;
+}
+.card.one .card-header{
+    background-image: url(images/dining-set.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 150px;
+    max-width: 300px;
+    max-height: 200px;
+}
+.card.two .card-header{
+    background-image: url(images/dresser.png);
+    background-position: center;
+    background-size: cover;
+}
+.card.three .card-header{
+    background-image: url(images/lumber1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card.four .card-header{
+    background-image: url(images/logs.png);
+    background-position: center;
+    background-size: cover;
+}
+.card.five .card-header{
+    background-image: url(images/plywood.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card.six .card-header{
+    background-image: url(images/leather-sofa.png);
+    background-position: center;
+    background-size: cover;
+}
+.card-body{
+    grid-row: 5/ span 1;
+}
+.card-footer{
+    grid-row: 6/ span 1;
+    margin-top: .5rem;
+}
+.btn{
+    background: hsl(200, 50%, 50%);
+    border: none;
+    padding: .5em .75em;
+    border-radius: .25em;
+    cursor: pointer;
+}
+.btn:hover, .btn:focus {
+    background: green;
+}
+.btn.btn-outline{
+    background: none;
+    border: 1px solid hsl(200, 50%, 50%);
+}
+.btn.btn.btn-outline:hover, .btn.btn-outline:focus{
+    background: hsl(200, 50%, 50%);
+}
+.snaps-inline{
+    scroll-snap-type: inline mandatory;
+    scroll-padding: 1 rem;
+}
+.snaps-inline > *{
+    scroll-snap-align: start;
+}
+.footer{
+    grid-row: 10/ span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+.social{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.copyright{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+@media screen and (min-width: 481px){
+    .home{
+        padding-left: 100px;
+        padding-right: 100px;
+        background-color: #777;
+    }
+    .card{
+        max-width: 300px;
+    }
+}
